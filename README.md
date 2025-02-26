@@ -1,2 +1,5 @@
 # tech-notes-press
-Tech notes written using VitePress
+
+[![tech-notes-press](https://github.com/ongzhixian/tech-notes-press/actions/workflows/main.yaml/badge.svg?branch=main)](https://github.com/ongzhixian/tech-notes-press/actions/workflows/main.yaml)
+
+Tech notes
