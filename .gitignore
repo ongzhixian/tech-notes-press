@@ -133,4 +133,7 @@ dist
 .idea/
 
 # vitepress
+.vitepress/dist
 .vitepress/cache/
+
+artifacts/

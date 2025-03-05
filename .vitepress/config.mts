@@ -8,18 +8,26 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Page 1', link: '/page1' },
+      { text: 'AppUser', link: '/app-user' },
+      { component: 'SignInOutMenuLinkComponent' },
     ],
 
-    sidebar: [
-      {
+    sidebar: {
+
+      '/': {
         text: 'Examples',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          {text: 'Markdown Examples', link: '/markdown-examples'},
+          {text: 'Runtime API Examples', link: '/api-examples'}
         ]
-      }
-    ],
+      },
+
+      '/authentication/': {
+        items: []
+      },
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }

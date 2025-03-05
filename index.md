@@ -23,3 +23,8 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<SignInOutComponent />
+
+<script setup>
+  import SignInOutComponent from '.vitepress/components/SignInOutComponent.vue'
+</script>
