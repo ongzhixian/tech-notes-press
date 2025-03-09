@@ -1,4 +1,7 @@
-# Page 2
+# Journal
+
+All journals are personal.
+
 
 <script setup>
 import { ref } from 'vue';

@@ -1,12 +1,12 @@
 <template>
-
-  <a class="VPNavBarMenuLink" :href="linkUrl" @click="LogInOut">
-    <span>{{linkText}}</span>
-    </a>
+<a class="VPNavBarMenuLink" :href="linkUrl" @click="LogInOut"><span>{{linkText}}</span></a>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { JwtServices } from '../../services/commonServices';
+
+const jwtHelper = new JwtServices();
 
 const links = {
   'sign-in': {
@@ -19,16 +19,19 @@ const links = {
   },
 }
 
-
-
 const linkText = ref(links['sign-in'].text);
 const linkUrl = ref(links['sign-in'].url);
 
 function LogInOut(event) {
   console.log('LogInOut', event);
 
-  linkText.value = links[linkText.value].text;
-  linkUrl.value = links[linkText.value].url;
+
+  let linkType = jwtHelper.hasValidToken() ? 'sign-out' : 'sign-in';
+  console.log(linkType);
+  linkText.value = links[linkType].text;
+  linkUrl.value = links[linkType].url;
+
+
 
   // if (linkText.value == 'Sign in') {
   //   linkText.value = 'Sign out';

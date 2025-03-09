@@ -137,3 +137,16 @@
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
 }
 
+/**
+ * ZX-Custom
+ * -------------------------------------------------------------------------- */
+section.todo {
+  border: 6px solid lightyellow;
+  padding: 0.3rem 1.3rem;
+  font-family: monospace;
+  margin-top: .5rem;
+}
+section.todo::before {
+  content: "TODO:";
+  color: orange;
+}

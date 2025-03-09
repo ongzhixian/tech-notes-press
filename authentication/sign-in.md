@@ -2,7 +2,6 @@
 
 <SignInFormComponent />
 
-
 <script setup>
   import SignInFormComponent from '../.vitepress/components/forms/SignInFormComponent.vue';
 </script>
