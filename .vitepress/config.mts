@@ -8,7 +8,16 @@ export default defineConfig({
   head: [
     [ 'link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' } ],
     [ 'link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' } ],
-    [ 'link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap' } ]
+    [ 'link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto&display=swap' } ],
+    // [
+    //   'script',
+    //   { id: 'register-sw' },
+    //   `;(() => {
+    //     if ('serviceWorker' in navigator) {
+    //       navigator.serviceWorker.register('/sw.js')
+    //     }
+    //   })()`
+    // ]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -20,6 +29,7 @@ export default defineConfig({
       // { text: 'Examples', link: '/markdown-examples' },
       // { text: 'AppUser', link: '/app-user/' },
       { component: 'SignInOutMenuLinkComponent' },
+      { component: 'AppsMenuLinkComponent' },
     ],
 
     sidebar: {

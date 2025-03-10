@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import SignInOutMenuLinkComponent from "../components/menuLinks/SignInOutMenuLinkComponent.vue";
+import AppsMenuLinkComponent from "../components/menuLinks/AppsMenuLinkComponent.vue";
 
 export default {
   extends: DefaultTheme,
@@ -13,7 +14,8 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    app.component('SignInOutMenuLinkComponent', SignInOutMenuLinkComponent)
+    app.component('SignInOutMenuLinkComponent', SignInOutMenuLinkComponent);
+    app.component('AppsMenuLinkComponent', AppsMenuLinkComponent)
     // ...
   }
 } satisfies Theme
