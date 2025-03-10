@@ -1,0 +1,44 @@
+[
+  {
+    "action": "upload",
+    "localPath": "C:\\src\\github.com\\ongzhixian\\tech-notes-press\\artifacts\\404.html",
+    "localMD5": "64C7ECD416CA5EE1E58F3F6808775153",
+    "remotePath": "404.html",
+    "status": "pending-upload"
+  },
+  {
+    "action": "upload",
+    "localPath": "C:\\src\\github.com\\ongzhixian\\tech-notes-press\\artifacts\\api-examples.html",
+    "localMD5": "2F1D084D69D84BF299AC62D90FEB2353",
+    "remotePath": "api-examples.html",
+    "status": "pending-upload"
+  },
+  {
+    "action": "upload",
+    "localPath": "C:\\src\\github.com\\ongzhixian\\tech-notes-press\\artifacts\\development-notes.html",
+    "localMD5": "EFD1DC1C27A3CA1BDFA3C3E744393E0C",
+    "remotePath": "development-notes.html",
+    "status": "pending-upload"
+  },
+  {
+    "action": "upload",
+    "localPath": "C:\\src\\github.com\\ongzhixian\\tech-notes-press\\artifacts\\error.html",
+    "localMD5": "AF3E47640AC0139ED91850B1BA7A095C",
+    "remotePath": "error.html",
+    "status": "pending-upload"
+  },
+  {
+    "action": "upload",
+    "localPath": "C:\\src\\github.com\\ongzhixian\\tech-notes-press\\artifacts\\favicon.ico",
+    "localMD5": "9D14AC5C966DD85C01F1BD8731C52960",
+    "remotePath": "favicon.ico",
+    "status": "pending-upload"
+  },
+  {
+    "action": "remove",
+    "localPath": "C:\\src\\github.com\\ongzhixian\\tech-notes-press\\artifacts\\hashmap.json",
+    "localMD5": "8A57D104F2CFCC9D1074A6B21A3EB6C2",
+    "remotePath": "hashmap.json",
+    "status": "pending-upload"
+  }
+]
