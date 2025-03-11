@@ -6,12 +6,31 @@
 import { ref, onMounted } from 'vue';
 import { JwtServices } from '../../services/commonServices';
 
+const appBroadcastChannel = new BroadcastChannel("tech_notes_press");
 const jwtHelper = new JwtServices();
 const hasValidToken = ref(false);
 
 onMounted(() => {
   hasValidToken.value = jwtHelper.hasValidToken();
+  appBroadcastChannel.onmessage = handleAppBroadcastChannelMessage;
 });
+
+function handleAppBroadcastChannelMessage(e) {
+
+  let message = e.data;
+
+  if (!message.hasOwnProperty('type') || !message.hasOwnProperty('payload')) return; // No identifiable message type; do nothing
+
+  console.log('handleAppBroadcastChannelMessage');
+
+  if (message.type === 'auth') {
+    let messagePayload = message.payload;
+
+    if (!messagePayload.hasOwnProperty('type') || !messagePayload.hasOwnProperty('payload')) return;
+
+    if (messagePayload.type === 'status-changed') hasValidToken.value = jwtHelper.hasValidToken();
+  }
+}
 </script>
 
 <style scoped>

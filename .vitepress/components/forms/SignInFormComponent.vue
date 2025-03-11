@@ -34,6 +34,7 @@ import { ref, onBeforeMount, getCurrentInstance  } from 'vue';
 import localStorageService from "../../services/LocalStorageService.js";
 import { JwtServices, FunctionResponse } from '../../services/commonServices.js'
 
+const appBroadcastChannel = new BroadcastChannel("tech_notes_press");
 const instance = getCurrentInstance();
 const jwtHelper = new JwtServices();
 const userIsSignedIn = ref(jwtHelper.hasValidToken());
@@ -47,6 +48,13 @@ const signInFormModel = ref({
 function setSignedIn() {
   userIsSignedIn.value = true;
   signedInSubject.value = jwtHelper.getJwtSubject();
+  appBroadcastChannel.postMessage({
+    type: 'auth',
+    payload: {
+      type: 'status-changed',
+      payload: 'authenticated'
+    }
+  });
 }
 
 
