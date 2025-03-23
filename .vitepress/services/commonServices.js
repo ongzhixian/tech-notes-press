@@ -174,4 +174,4 @@ function JwtServices() {
 }
 
 
-export { JwtServices, FunctionResponse };
+export { JwtServices, FunctionResponse, FailedResponse };

@@ -31,7 +31,7 @@
 
 <script setup>
 import { ref, onBeforeMount, getCurrentInstance  } from 'vue';
-import localStorageService from "../../services/LocalStorageService.js";
+import localStorageService from "../../services/localStorageService.js";
 import { JwtServices, FunctionResponse } from '../../services/commonServices.js'
 
 const appBroadcastChannel = new BroadcastChannel("tech_notes_press");

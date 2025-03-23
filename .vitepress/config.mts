@@ -47,11 +47,43 @@ export default defineConfig({
         items: [
           {text: 'Register', link: '/app-user/register'},
           {text: 'Dev Chat', link: '/app-user/chat'},
+          {text: 'Trading', link: '/apps/trading/'},
           {
-            text: 'Examples',
+            text: 'Research',
             items: [
-              {text: 'Markdown Examples', link: '/markdown-examples'},
-              {text: 'Runtime API Examples', link: '/api-examples'}
+              {text: 'Machine Learning', link: '/markdown-examples'},
+            ]
+          }
+
+        ]
+      },
+
+      '/apps/trading/': {
+        items: [
+          {text: 'Trading Home', link: '/apps/trading/'},
+          {text: 'Accounts', link: '/apps/trading/accounts'},
+          {text: 'Instruments', link: '/apps/trading/tradable-instruments'},
+          {
+            text: 'Trading',
+            items: [
+              {text: 'Order', link: '/markdown-examples'},
+              {text: 'Positions', link: '/markdown-examples'},
+              {text: 'Trades', link: '/markdown-examples'},
+              {text: 'Analysis', link: '/api-examples'}
+            ]
+          },
+          {
+            text: 'History',
+            items: [
+              {text: 'Trades', link: '/markdown-examples'},
+              // {text: 'Runtime API Examples', link: '/api-examples'}
+            ]
+          },
+          {
+            text: 'Research',
+            items: [
+              {text: 'Algo Trading', link: '/markdown-examples'},
+              // {text: 'Runtime API Examples', link: '/api-examples'}
             ]
           }
 
@@ -134,5 +166,5 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
   },
-  outDir: './artifacts'
+  outDir: './artifacts',
 })

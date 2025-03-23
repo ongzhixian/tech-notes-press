@@ -50,7 +50,7 @@ function LogInOut(event) {
 function updateButtonText() {
 
   let linkType = jwtHelper.hasValidToken() ? 'sign-out' : 'sign-in';
-  console.log('updateButtonText', linkType);
+  //console.log('updateButtonText', linkType);
   linkText.value = links[linkType].text;
   linkUrl.value = links[linkType].url;
 }
